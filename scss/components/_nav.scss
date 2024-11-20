@@ -1,0 +1,85 @@
+.menu {
+	@extend %listreset;
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 100%;
+	transform: scale(0.9);
+	opacity: 0;
+	visibility: hidden;
+	background-color: $green;
+	transition: transform .3s ease-in-out, visibility .3s ease-in-out, opacity .3s ease-in-out;
+
+	@include media('>=tablet') {
+		background-color: transparent;
+		opacity: 1;
+		visibility: visible;
+		display: flex;
+		position: static;
+	}
+
+	.active {
+		background-color: $green;
+		@include media('>=tablet') {
+			background-color: transparent;
+		}
+		&::after {
+			@include media('>=tablet') {
+				content: '';
+				position: absolute;
+				background: none repeat scroll 0 0 transparent;
+				bottom: 0;
+				left: 0;
+				background: $green;
+				height: 3px;
+				width: 100%;
+				transition: width .3s ease 0s, left .3s ease 0s;
+			}
+		}
+	}
+
+	a {
+		display: block;
+		padding: 10px;
+		margin-bottom: 1px;
+		text-decoration: none;
+		background-color: $coral;
+		text-transform: uppercase;
+		transition: background-color .3s ease-in, color .3s ease;
+		@include media('>=tablet') {
+			position: relative;
+			margin: 0 20px;
+			padding: 0 5px 5px;
+			background-color: transparent;
+			display: inline-block;
+			transition: background-color .3s ease-in, color .3s ease;
+		}
+
+
+		&::after {
+			@include media('>=tablet') {
+				content: '';
+				position: absolute;
+				background: none repeat scroll 0 0 transparent;
+				bottom: 0;
+				left: 50%;
+				background: $green;
+				height: 3px;
+				width: 0;
+				transition: width .3s ease 0s, left .3s ease 0s;
+			}
+		}
+
+		&:hover {
+			background-color: $green;
+			@include media('>=tablet') {
+				background-color: transparent;
+
+				&::after {
+					width: 100%;
+					left: 0;
+				}
+			}
+		}
+	}
+}
