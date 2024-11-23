@@ -1111,39 +1111,9 @@ a:hover {
   font-size: 14px;
 }
 
-.footer-row {
-  margin: 0 -25px;
-}
-@media (min-width: 768px) {
-  .footer-row {
-    display: flex;
-  }
-}
-
-.footer-box,
-.footer-col {
-  margin-bottom: 40px;
-}
-@media (min-width: 768px) {
-  .footer-box,
-  .footer-col {
-    margin-bottom: 0;
-  }
-}
-
 .footer-socials {
   display: flex;
   justify-content: space-between;
-}
-
-.footer-box {
-  margin: 0 25px;
-}
-.footer-box:first-child {
-  max-width: calc(40% - 25px);
-}
-.footer-box:last-child {
-  max-width: calc(60% - 25px);
 }
 
 @font-face {
