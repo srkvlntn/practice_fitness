@@ -399,8 +399,9 @@ p, ul, ol {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2;
+  line-height: 1;
   margin: 0;
+  font-weight: normal;
 }
 
 h1 {
@@ -420,7 +421,7 @@ h4 {
 }
 
 h5 {
-  font-size: 17px;
+  font-size: 15px;
 }
 
 h6 {
@@ -745,6 +746,77 @@ a:hover {
   }
 }
 
+.card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover .card-description {
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.3);
+}
+.card h4 {
+  color: #fd634e;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.card h2 {
+  color: #a2ca28;
+  font-size: 25px;
+}
+@media (min-width: 768px) {
+  .card h2 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .card h2 {
+    font-size: 35px;
+  }
+}
+.card h2,
+.card h4 {
+  text-transform: uppercase;
+}
+.card a {
+  color: #a2ca28;
+  text-decoration: underline;
+  transition: 0.3s ease-in-out;
+}
+.card a:hover {
+  color: #fd634e;
+  text-decoration: none;
+}
+
+.card-image {
+  height: 400px;
+}
+@media (min-width: 768px) {
+  .card-image {
+    height: auto;
+  }
+}
+
+.card-description {
+  text-align: center;
+  z-index: 1;
+  padding: 45px 40px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .card-description {
+    padding: 50px 45px;
+  }
+}
+@media (min-width: 1024px) {
+  .card-description {
+    padding: 55px 50px;
+  }
+}
+.card-description p {
+  font-size: 14px;
+  color: #656e74;
+}
+
 .wrapper {
   overflow: hidden;
   position: relative;
@@ -758,6 +830,10 @@ a:hover {
 
 .bg-green {
   background-color: #a2ca28;
+}
+
+.text-coral {
+  color: #fd634e;
 }
 
 .hero {
@@ -879,6 +955,54 @@ a:hover {
 .section-info .info-box-item a {
   position: absolute;
   bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .section-about .card:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  .section-about .card:nth-child(even) {
+    flex-direction: row;
+  }
+}
+.section-about .card:nth-child(odd) .track-text {
+  right: 5%;
+  left: auto;
+}
+.section-about .card:nth-child(even) .track-text {
+  left: 5%;
+  right: auto;
+}
+.section-about .card-image {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .section-about .card-image {
+    min-width: 60%;
+    height: auto;
+  }
+}
+.section-about .card-image .track-text {
+  position: absolute;
+  bottom: 10%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.section-about .card-image .track-text img {
+  margin: 0 5px;
+}
+.section-about .card-image .track-text i {
+  font-size: 20px;
+}
+.section-about .card-description {
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .section-about .card-description {
+    min-width: 40%;
+    height: auto;
+  }
 }
 
 .header {

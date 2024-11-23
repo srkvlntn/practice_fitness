@@ -13,6 +13,10 @@
 	background-color: $green;
 }
 
+.text-coral {
+	color: $coral;
+}
+
 
 .hero {
 	position: relative;
@@ -138,4 +142,62 @@
 	}
 
 
+}
+
+.section-about {
+	.card {
+		@include media('>=tablet') {
+			&:nth-child(odd) {
+				flex-direction: row-reverse;
+			}
+
+
+			&:nth-child(even) {
+				flex-direction: row;
+			}
+		}
+
+		&:nth-child(odd) .track-text {
+			right: 5%;
+			left: auto;
+		}
+
+		&:nth-child(even) .track-text {
+			left: 5%;
+			right: auto;
+		}
+
+	}
+
+	.card-image {
+		position: relative;
+		@include media('>=tablet') {
+			min-width: 60%;
+			height: auto;
+		}
+
+		.track-text {
+			position: absolute;
+			bottom: 10%;
+			color: $white;
+			display: flex;
+			align-items: center;
+
+			img {
+				margin: 0 5px;
+			}
+
+			i {
+				font-size: 20px;
+			}
+		}
+	}
+
+	.card-description {
+		overflow: hidden;
+		@include media('>=tablet') {
+			min-width: 40%;
+			height: auto;
+		}
+	}
 }
