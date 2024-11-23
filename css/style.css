@@ -307,7 +307,7 @@ template {
   display: none;
 }
 
-.menu {
+.footer-socials, .menu {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1086,6 +1086,64 @@ a:hover {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
+}
+
+.footer {
+  background-color: #0d1119;
+  color: #8297a7;
+  padding: 50px 0;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding: 70px 0;
+  }
+}
+.footer h5 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .footer h5 {
+    margin-bottom: 30px;
+  }
+}
+.footer p {
+  font-size: 14px;
+}
+
+.footer-row {
+  margin: 0 -25px;
+}
+@media (min-width: 768px) {
+  .footer-row {
+    display: flex;
+  }
+}
+
+.footer-box,
+.footer-col {
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .footer-box,
+  .footer-col {
+    margin-bottom: 0;
+  }
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-box {
+  margin: 0 25px;
+}
+.footer-box:first-child {
+  max-width: calc(40% - 25px);
+}
+.footer-box:last-child {
+  max-width: calc(60% - 25px);
 }
 
 @font-face {

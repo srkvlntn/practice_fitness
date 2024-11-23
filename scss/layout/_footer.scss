@@ -1,3 +1,56 @@
 .footer {
-	
+	background-color: $bg-footer;
+	color: #8297a7;
+	padding: 50px 0;
+
+
+
+	@include media('>=tablet') {
+		padding: 70px 0;
+
+	}
+
+	h5 {
+		color: $white;
+		margin-bottom: 20px;
+		@include media('>=tablet') {
+			margin-bottom: 30px;
+		}
+	}
+	p {
+		font-size: 14px;
+	}
+}
+
+.footer-row {
+	margin: 0 -25px;
+	@include media('>=tablet') {
+		display: flex;
+	}
+}
+
+.footer-box,
+.footer-col {
+	margin-bottom: 40px;
+	@include media('>=tablet') {
+		margin-bottom: 0;
+	}
+}
+
+.footer-socials {
+	@extend %listreset;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-box {
+	margin: 0 25px;
+
+	&:first-child {
+		max-width: calc(40% - 25px);
+	}
+
+	&:last-child {
+		max-width: calc(60% - 25px);
+	}
 }
