@@ -437,6 +437,11 @@ a:hover {
   text-decoration: underline;
 }
 
+i {
+  margin: 0;
+  padding: 0;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -1202,7 +1207,55 @@ a:hover {
 
 .footer-socials {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin: 0 -10px 20px;
+}
+@media (min-width: 768px) {
+  .footer-socials {
+    justify-content: space-between;
+  }
+}
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  height: 51px;
+  width: 51px;
+  font-size: 20px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #a2ca28;
+  text-decoration: none;
+  transition: color 0.25s ease-in-out, background-color 0.3s ease-in;
+}
+@media (min-width: 1024px) {
+  .footer-socials a {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media (min-width: 1100px) {
+  .footer-socials a {
+    height: 51px;
+    width: 51px;
+  }
+}
+.footer-socials a:hover {
+  color: #fd634e;
+  background-color: #a2ca28;
+}
+.footer-socials .icon-facebook {
+  background-color: #2e3192;
+}
+.footer-socials .icon-twitter {
+  background-color: #00aeef;
+}
+.footer-socials .icon-youtube {
+  background-color: #ed3123;
+}
+.footer-socials .icon-linkedin {
+  background-color: #171a8f;
 }
 
 @font-face {
