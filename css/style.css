@@ -761,12 +761,8 @@ a:hover {
 }
 .card h2 {
   color: #a2ca28;
-  font-size: 25px;
-}
-@media (min-width: 768px) {
-  .card h2 {
-    font-size: 30px;
-  }
+  font-size: 30px;
+  font-weight: lighter;
 }
 @media (min-width: 1024px) {
   .card h2 {
@@ -1010,25 +1006,94 @@ a:hover {
     flex-wrap: wrap;
   }
 }
+.section-health .bg-green h4 {
+  font-size: 17px;
+}
 .section-health .card-description {
   flex-grow: 1;
+  text-align: left;
+}
+.section-health .card {
+  box-sizing: border-box;
+}
+.section-health .card:nth-child(even) {
+  background-color: #a2ca28;
+}
+.section-health .card:nth-child(even) h2,
+.section-health .card:nth-child(even) p,
+.section-health .card:nth-child(even) h4,
+.section-health .card:nth-child(even) i,
+.section-health .card:nth-child(even) data {
+  color: #fff;
+}
+.section-health .card:nth-child(odd) i {
+  color: #e3e9ea;
 }
 @media (min-width: 768px) {
   .section-health .card {
     flex: 0 0 40%;
   }
-  .section-health .card:nth-child(even) {
-    background-color: #a2ca28;
-  }
-  .section-health .card:nth-child(even) h2,
-  .section-health .card:nth-child(even) p,
-  .section-health .card:nth-child(even) h5 {
-    color: #fff;
-  }
   .section-health .card:nth-child(4n-2), .section-health .card:nth-child(4n-1) {
     flex: 0 0 60%;
   }
 }
+.section-health .card i {
+  font-size: 28px;
+}
+.section-health .card-image {
+  position: relative;
+}
+.section-health .description-title-holder {
+  display: flex;
+  justify-content: space-between;
+}
+.section-health .description-title {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-transform: uppercase;
+}
+.section-health .description-title h4 {
+  margin-bottom: 12px;
+}
+.section-health h2 {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .section-health h2 {
+    margin-bottom: 40px;
+    font-size: 35px;
+  }
+}
+@media (min-width: 768px) {
+  .section-health .summer h2 {
+    font-size: 40px;
+  }
+}
+.section-health .summer .status {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.section-health .summer .status .topic {
+  display: flex;
+  align-items: center;
+}
+.section-health .summer .status .topic p {
+  margin-right: 10px;
+}
+.section-health .summer .status data,
+.section-health .summer .status .topic {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.section-health .summer .status i {
+  font-size: 16px;
+}
+
 .header {
   position: absolute;
   top: 0;

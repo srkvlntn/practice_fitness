@@ -13,14 +13,13 @@
 		color: $coral;
 		font-size: 14px;
 		margin-bottom: 10px;
+	//	fw reg
 	}
 
 	h2 {
 		color: $green;
-		font-size: 25px;
-		@include media('>=tablet') {
-			font-size: 30px;
-		}
+		font-size: 30px;
+		font-weight: lighter;
 		@include media('>=desktop'){
 			font-size: $h2-font-size;
 		}
@@ -67,6 +66,5 @@
 		font-size: 14px;
 		color: $gray;
 	}
-
 }
 

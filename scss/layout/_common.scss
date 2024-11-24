@@ -214,31 +214,113 @@
 		}
 	}
 
+	.bg-green {
+		h4 {
+			font-size: 17px;
+		}
+	}
+
 	.card-description {
 		flex-grow: 1;
+		text-align: left;
 	}
 
 	.card {
+		box-sizing: border-box;
+
+		&:nth-child(even) {
+			background-color: $green;
+
+			h2,
+			p,
+			h4,
+			i,
+			data {
+				color: $white;
+			}
+		}
+
+		&:nth-child(odd) {
+			i {
+				color: #e3e9ea;
+			}
+		}
+
 		@include media('>=tablet') {
 			flex: 0 0 40%;
 
-			&:nth-child(even) {
-				background-color: $green;
-				h2,
-				p,
-				h5 {
-					color: $white;
-				}
-			}
 			&:nth-child(4n-2),
 			&:nth-child(4n-1) {
 				flex: 0 0 60%;
 			}
 		}
+
+		i {
+			font-size: 28px;
+		}
 	}
 
 	.card-image {
-
+		position: relative;
 	}
 
+	.description-title-holder {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.description-title {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		text-transform: uppercase;
+
+		h4 {
+			margin-bottom: 12px;
+		}
+	}
+
+	h2 {
+		margin-bottom: 20px;
+		@include media('>=tablet') {
+			margin-bottom: 40px;
+			font-size: 35px;
+		}
+	}
+
+	.summer {
+		h2 {
+			@include media('>=tablet') {
+				font-size: 40px;
+			}
+		}
+
+		.status {
+			position: absolute;
+			left: 5%;
+			right: 5%;
+			top: 10%;
+			display: flex;
+			justify-content: space-between;
+
+			.topic {
+				display: flex;
+				align-items: center;
+
+				p {
+					margin-right: 10px;
+				}
+			}
+
+			data,
+			.topic {
+				text-transform: uppercase;
+				font-size: 14px;
+			}
+
+			i {
+				font-size: 16px;
+			}
+		}
+	}
 }
