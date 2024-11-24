@@ -4,13 +4,17 @@
 }
 
 .container {
-	max-width: 1150px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
 
 .bg-green {
 	background-color: $green;
+}
+
+.bg-coral {
+	background-color: $coral;
 }
 
 .text-coral {
@@ -200,4 +204,41 @@
 			height: auto;
 		}
 	}
+}
+
+.section-health {
+	.row-health {
+		@include media('>=tablet') {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	.card-description {
+		flex-grow: 1;
+	}
+
+	.card {
+		@include media('>=tablet') {
+			flex: 0 0 40%;
+
+			&:nth-child(even) {
+				background-color: $green;
+				h2,
+				p,
+				h5 {
+					color: $white;
+				}
+			}
+			&:nth-child(4n-2),
+			&:nth-child(4n-1) {
+				flex: 0 0 60%;
+			}
+		}
+	}
+
+	.card-image {
+
+	}
+
 }

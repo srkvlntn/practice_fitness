@@ -790,11 +790,6 @@ a:hover {
 .card-image {
   height: 400px;
 }
-@media (min-width: 768px) {
-  .card-image {
-    height: auto;
-  }
-}
 
 .card-description {
   text-align: center;
@@ -823,13 +818,17 @@ a:hover {
 }
 
 .container {
-  max-width: 1150px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .bg-green {
   background-color: #a2ca28;
+}
+
+.bg-coral {
+  background-color: #fd634e;
 }
 
 .text-coral {
@@ -1005,6 +1004,31 @@ a:hover {
   }
 }
 
+@media (min-width: 768px) {
+  .section-health .row-health {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.section-health .card-description {
+  flex-grow: 1;
+}
+@media (min-width: 768px) {
+  .section-health .card {
+    flex: 0 0 40%;
+  }
+  .section-health .card:nth-child(even) {
+    background-color: #a2ca28;
+  }
+  .section-health .card:nth-child(even) h2,
+  .section-health .card:nth-child(even) p,
+  .section-health .card:nth-child(even) h5 {
+    color: #fff;
+  }
+  .section-health .card:nth-child(4n-2), .section-health .card:nth-child(4n-1) {
+    flex: 0 0 60%;
+  }
+}
 .header {
   position: absolute;
   top: 0;

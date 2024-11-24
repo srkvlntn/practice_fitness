@@ -47,9 +47,6 @@
 
 .card-image {
 	height: 400px;
-	@include media('>=tablet') {
-		height: auto;
-	}
 }
 
 .card-description {
