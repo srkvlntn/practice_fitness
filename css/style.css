@@ -1099,6 +1099,77 @@ i {
   font-size: 16px;
 }
 
+.section-outro {
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  position: relative;
+  z-index: -1;
+}
+.section-outro .row-outro {
+  padding: 80px 0;
+  margin-bottom: 50px;
+}
+.section-outro .row-outro h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+@media (min-width: 768px) {
+  .section-outro .row-outro h2 {
+    font-size: 45px;
+  }
+}
+.section-outro .row-outro p {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .section-outro .row-outro p {
+    font-size: 16px;
+  }
+}
+.section-outro::after, .section-outro::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -8%;
+  height: 120px;
+  width: 100%;
+  background: #0d1119;
+  transform: skewY(-4deg);
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .section-outro::after, .section-outro::before {
+    height: 120px;
+  }
+}
+.section-outro span {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -9%;
+  height: 90px;
+  width: 100%;
+  background: #fd634e;
+  opacity: 1;
+  transform: skewY(5deg);
+  overflow: hidden;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .section-outro span {
+    bottom: -70px;
+    height: 80px;
+    transform: skewY(2deg);
+  }
+}
+.section-outro::before {
+  transform: skewY(4deg);
+}
+
 .header {
   position: absolute;
   top: 0;
