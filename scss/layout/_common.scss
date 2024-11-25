@@ -327,17 +327,16 @@
 
 .section-outro {
 	color: $white;
-	text-align: center;
 	display: flex;
-	align-items: center;
-	justify-content: center;
 	height: 90vh;
 	position: relative;
 	z-index: -1;
 
 	.row-outro {
-		padding: 80px 0;
+		padding: 250px 0 80px;
 		margin-bottom: 50px;
+		display: inline-block;
+		text-align: center;
 
 		h2 {
 			font-size: 30px;
@@ -349,6 +348,8 @@
 
 		p {
 			font-size: 14px;
+			margin: 0 auto;
+			max-width: 60%;
 			@include media('>=tablet') {
 				font-size: $font-size-base;
 			}
