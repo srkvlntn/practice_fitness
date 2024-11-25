@@ -20,17 +20,83 @@
 	p {
 		font-size: 14px;
 	}
+
+	.form-group {
+		@include media('>=tablet') {
+			display: flex;
+			padding-top: 20px;
+			margin: 0 -5px;
+			align-items: stretch;
+		}
+
+		.form-item {
+			@include media('>=tablet') {
+				padding: 0 5px;
+
+				&:nth-child(1n+2) {
+					width: 25%;
+				}
+
+				&:nth-child(2) {
+					width: 50%;
+				}
+			}
+		}
+
+		input {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 30px;
+			border-radius: 5px;
+			border: 2px solid transparent;
+			font-size: 15px;
+
+			&:focus {
+				outline: none;
+				box-shadow: 0 0 0 1px $green;
+				border: 2px solid $green;
+			}
+		}
+
+		button {
+			display: inline-block;
+			margin-bottom: 30px;
+			width: 100%;
+			padding: 25px 30px;
+			border-radius: 5px;
+			font-size: 15px;
+			font-weight: lighter;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			&:hover {
+				background-color: $coral;
+			}
+
+			@include media('>=tablet') {
+				height: 100%;
+			}
+		}
+
+		button,
+		input {
+			@include media('>=tablet') {
+				padding: 15px 20px;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.footer-box {
+	margin-bottom: 30px;
 }
 
 .footer-socials {
 	@extend %listreset;
 	display: flex;
-	justify-content: center;
-	margin: 0 -10px 20px;
-	@include media('>=tablet') {
-		justify-content: space-between;
-	}
-
+	justify-content: space-between;
 
 	a {
 		display: flex;
@@ -40,7 +106,6 @@
 		height: 51px;
 		width: 51px;
 		font-size: 20px;
-		margin: 0 5px;
 		border-radius: 50%;
 		background-color: $green;
 		text-decoration: none;
@@ -60,7 +125,6 @@
 			color: $coral;
 			background-color: $green;
 		}
-
 	}
 
 	.icon-facebook {
