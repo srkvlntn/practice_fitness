@@ -1224,7 +1224,8 @@ i {
 }
 @media (min-width: 768px) {
   .section-outro::after, .section-outro::before {
-    height: 120px;
+    bottom: -17%;
+    height: 150px;
   }
 }
 .section-outro span {

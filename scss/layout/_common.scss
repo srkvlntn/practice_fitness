@@ -429,7 +429,8 @@
 		overflow: hidden;
 
 		@include media('>=tablet') {
-			height: 120px;
+			bottom: -17%;
+			height: 150px;
 		}
 	}
 
