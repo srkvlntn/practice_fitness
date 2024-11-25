@@ -1,12 +1,18 @@
 .card {
 	background-color: $white;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 
 	&:hover {
 		z-index: 2;
 
 		.card-description {
+			-webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
 			box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
 		}
 	}
@@ -35,6 +41,8 @@
 	a {
 		color: $green;
 		text-decoration: underline;
+		-webkit-transition: .3s ease-in-out;
+		-o-transition: .3s ease-in-out;
 		transition: .3s ease-in-out;
 
 		&:hover {
@@ -52,7 +60,11 @@
 	text-align: center;
 	z-index: 1;
 	padding: 45px 40px;
+	-webkit-transition: -webkit-box-shadow .3s ease-in-out;
+	transition: -webkit-box-shadow .3s ease-in-out;
+	-o-transition: box-shadow .3s ease-in-out;
 	transition: box-shadow .3s ease-in-out;
+	transition: box-shadow .3s ease-in-out, -webkit-box-shadow .3s ease-in-out;
 
 	@include media('>=tablet') {
 		padding: 50px 45px;
@@ -67,4 +79,3 @@
 		color: $gray;
 	}
 }
-

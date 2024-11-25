@@ -4,16 +4,24 @@
 	right: 0;
 	left: 0;
 	top: 100%;
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
 	transform: scale(0.9);
 	opacity: 0;
 	visibility: hidden;
 	background-color: $green;
+	-webkit-transition: visibility .3s ease-in-out, opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+	transition: visibility .3s ease-in-out, opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+	-o-transition: transform .3s ease-in-out, visibility .3s ease-in-out, opacity .3s ease-in-out;
 	transition: transform .3s ease-in-out, visibility .3s ease-in-out, opacity .3s ease-in-out;
+	transition: transform .3s ease-in-out, visibility .3s ease-in-out, opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
 
 	@include media('>=tablet') {
 		background-color: transparent;
 		opacity: 1;
 		visibility: visible;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		position: static;
 	}
@@ -33,6 +41,8 @@
 				background: $green;
 				height: 3px;
 				width: 100%;
+				-webkit-transition: width .3s ease 0s, left .3s ease 0s;
+				-o-transition: width .3s ease 0s, left .3s ease 0s;
 				transition: width .3s ease 0s, left .3s ease 0s;
 			}
 		}
@@ -46,6 +56,8 @@
 		font-weight: 500;
 		background-color: $coral;
 		text-transform: uppercase;
+		-webkit-transition: background-color .3s ease-in, color .3s ease;
+		-o-transition: background-color .3s ease-in, color .3s ease;
 		transition: background-color .3s ease-in, color .3s ease;
 		@include media('>=tablet') {
 			position: relative;
@@ -54,6 +66,8 @@
 			white-space: nowrap;
 			background-color: transparent;
 			display: inline-block;
+			-webkit-transition: background-color .3s ease-in, color .3s ease;
+			-o-transition: background-color .3s ease-in, color .3s ease;
 			transition: background-color .3s ease-in, color .3s ease;
 		}
 
@@ -68,6 +82,8 @@
 				background: $green;
 				height: 3px;
 				width: 0;
+				-webkit-transition: width .3s ease 0s, left .3s ease 0s;
+				-o-transition: width .3s ease 0s, left .3s ease 0s;
 				transition: width .3s ease 0s, left .3s ease 0s;
 			}
 		}
