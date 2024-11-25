@@ -57,12 +57,14 @@ $media-expressions: (
 // Сюда пишем стили для футера в проекта (изменяем от макета к макету)
 @import 'layout/footer';
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+
 @font-face {
 	font-family: 'icomoon';
 	src:
-			url('../fonts/icomoon.ttf?2ycotb') format('truetype'),
-			url('../fonts/icomoon.woff?2ycotb') format('woff'),
-			url('../fonts/icomoon.svg?2ycotb#icomoon') format('svg');
+			url('../fonts/icomoon.ttf?9fpsjg') format('truetype'),
+			url('../fonts/icomoon.woff?9fpsjg') format('woff'),
+			url('../fonts/icomoon.svg?9fpsjg#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;
@@ -83,6 +85,9 @@ $media-expressions: (
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-drop:before {
+	content: "\e909";
+}
 .icon-mark:before {
 	content: "\e900";
 }
@@ -91,9 +96,6 @@ $media-expressions: (
 }
 .icon-berry:before {
 	content: "\e903";
-}
-.icon-drop-red:before {
-	content: "\e904";
 }
 .icon-man:before {
 	content: "\e905";

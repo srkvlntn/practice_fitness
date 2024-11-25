@@ -1,4 +1,4 @@
-// Переменные цветов
+// Colors
 
 $gray: #656e74;
 $light-gray: #e3e9ea;
@@ -10,7 +10,7 @@ $dark-green: darkolivegreen;
 $red: #f00;
 $yellow: #ff0;
 
-//socials colors
+// Socials colors
 $social-red: #ed3123;
 $social-blue: #00aeef;
 $social-dark-blue: #2e3192;
@@ -22,7 +22,7 @@ $bg-footer: #0d1119;
 $black: #000;
 $white: #fff;
 
-$base-font-sans-serif: 'Rubik', sans-serif;
+$base-font-sans-serif: "Open Sans", 'Roboto', sans-serif;
 $base-font-serif: 'Times New Roman', serif;
 
 // Основной размер и цвет текста, семейство шрифта и цвет фона
@@ -34,15 +34,15 @@ $base-font-family: $base-font-sans-serif !default;
 
 $base-min-width: 320px;
 
-// Цвет глобальной ссылки
+// Global color for a
 $base-link-color: $white;
 
-// Формы
+// Form
 $form-element-border-color: $gray;
 $form-element-focus-border-color: $black;
 $placeholder-color: $gray ;
 
-// Переменные font-size для заголовков
+// Font-size for h1-6
 $h1-font-size: 40px;
 $h2-font-size: 35px;
 $h3-font-size: 24px;

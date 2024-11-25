@@ -53,7 +53,6 @@
 	}
 
 	h1 {
-		font-weight: normal;
 		font-size: 30px;
 		@include media('>=tablet') {
 			font-size: 35px;
@@ -71,6 +70,7 @@
 	p {
 		font-size: 12px;
 		padding-left: 120px;
+		font-weight: bold;
 		@include media('>=tablet') {
 			padding-left: 160px;
 			font-size: 15px;
@@ -94,7 +94,13 @@
 
 	.img-info-box {
 		height: 44px;
-		margin-bottom: 23px;
+		margin-bottom: 15px;
+		@include media('>=tablet') {
+			margin-bottom: 22px;
+		}
+		@include media('>=desktop') {
+			margin-bottom: 30px;
+		}
 
 		img {
 			height: 100%;
@@ -103,13 +109,20 @@
 
 	h3 {
 		color: $dark-blue;
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 		font-weight: normal;
+		@include media('>=tablet') {
+			margin-bottom: 22px;
+		}
+		@include media('>=desktop') {
+			margin-bottom: 30px;
+		}
 	}
 
 	p {
 		color: #8297a7;
 		margin-bottom: 28px;
+		//	fw reg
 	}
 
 	a {
@@ -127,7 +140,7 @@
 	}
 
 	.info-box-item {
-		margin-bottom: 30px;
+		margin-bottom: 35px;
 		position: relative;
 		@include media('>=tablet') {
 			&:nth-child(n+3) {
@@ -154,7 +167,6 @@
 			&:nth-child(odd) {
 				flex-direction: row-reverse;
 			}
-
 
 			&:nth-child(even) {
 				flex-direction: row;
@@ -185,20 +197,28 @@
 			bottom: 10%;
 			color: $white;
 			display: flex;
-			align-items: center;
 
 			img {
 				margin: 0 5px;
 			}
 
 			i {
-				font-size: 20px;
+				font-size: 25px;
+				color: $coral;
 			}
 		}
 	}
 
 	.card-description {
-		overflow: hidden;
+		h2 {
+			margin-bottom: 10px;
+		}
+
+		i {
+			color: #e3e9ea;
+			font-size: 20px;
+		}
+
 		@include media('>=tablet') {
 			min-width: 40%;
 			height: auto;
@@ -211,12 +231,6 @@
 		@include media('>=tablet') {
 			display: flex;
 			flex-wrap: wrap;
-		}
-	}
-
-	.bg-green {
-		h4 {
-			font-size: 17px;
 		}
 	}
 
@@ -237,6 +251,10 @@
 			i,
 			data {
 				color: $white;
+			}
+
+			h4 {
+				font-size: 17px;
 			}
 		}
 
@@ -274,10 +292,6 @@
 		flex-direction: column;
 		align-items: start;
 		text-transform: uppercase;
-
-		h4 {
-			margin-bottom: 12px;
-		}
 	}
 
 	h2 {
@@ -301,6 +315,7 @@
 			right: 5%;
 			top: 10%;
 			display: flex;
+			font-weight: 500;
 			justify-content: space-between;
 
 			.topic {
@@ -328,7 +343,7 @@
 .section-outro {
 	color: $white;
 	display: flex;
-	height: 90vh;
+	height: 80vh;
 	position: relative;
 	z-index: -1;
 
@@ -339,7 +354,7 @@
 		text-align: center;
 
 		h2 {
-			font-size: 30px;
+			font-size: 35px;
 			margin-bottom: 25px;
 			@include media('>=tablet') {
 				font-size: 45px;
@@ -391,7 +406,6 @@
 			height: 80px;
 			transform: skewY(2deg);
 		}
-
 	}
 
 	&::before {
